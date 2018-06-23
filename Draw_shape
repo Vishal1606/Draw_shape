@@ -1,0 +1,33 @@
+import turtle
+
+def draw_square(t1):
+    for i in range(1,5):
+        t1.forward(100)
+        t1.right(90)
+
+def draw_circle(t2):
+    t2.circle(50)
+
+def draw_shape():
+    window = turtle.Screen()
+    window.bgcolor("green")
+
+    #CReate the turtle Brad-Draws a square
+    brad=turtle.Turtle()
+    brad.shape("square")
+    brad.speed(2)
+    brad.color("white")
+    draw_square(brad)
+    
+    #Create the turtle Angie-Draws a circle
+    angie=turtle.Turtle()
+    angie.shape("circle")#change the shape of the turtle
+    angie.color("red")#Change the color of the turtle
+    angie.speed(2)#change the speed of the turtle
+    angie.pencolor("white")#Change the color of the pen
+    #angie.ht()   #use to hide the turtle
+    draw_circle(angie)
+
+    window.exitonclick()
+
+draw_shape()
